@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.pcc.appringtone.MainActivity">
-
-    <GridView
+    tools:context="com.example.pcc.appringtone.Category">
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="3"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:id="@+id/gridView"
-        ></GridView>
+        android:gravity="center"
+        android:textColor="#ff0000"
+        android:textSize="50sp"
+        android:text="App Wallpapers"
+        android:id="@+id/appwallpapers"
+        android:background="@drawable/style"
+        android:textAppearance="@style/AlertDialog.AppCompat.Light"
+        android:fontFamily="cursive"/>
 </RelativeLayout>
