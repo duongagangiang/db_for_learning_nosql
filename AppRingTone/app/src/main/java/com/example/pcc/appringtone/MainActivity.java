@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -29,7 +31,7 @@ import java.util.concurrent.ExecutionException;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     int j=1;
-    String url;
+    String url,title;
     List<Image> arr=new ArrayList<>();
     GridView gridView;
     GridViewAdapter adapter;
@@ -38,8 +40,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
         url=getIntent().getStringExtra("url");
+        title=getIntent().getStringExtra("title");
         gridView=(GridView)findViewById(R.id.gridView);
         try {
             arr=new getImage().execute(j).get();
@@ -80,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle(title);
+
     }
 
     @Override
@@ -108,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 for(int i=0;i<elements.size();i++){
                     Element e=elements.get(i);
                     String src=e.attr("src").replace(" ","%20");
-                    String tieude=e.attr("alt");
+                    String tieude=e.attr("alt").replace(" Android Wallpaper","");
                     Log.d("profile", src+"---"+tieude);
                     lst.add(new Image(tieude,src));
                 }

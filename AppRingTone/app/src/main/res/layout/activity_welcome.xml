@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel_layout"
+    tools:context="com.example.pcc.appringtone.WelcomeActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#ff0000"
+        android:textSize="38sp"
+        android:text="Wallpapers"
+        android:shadowColor="#000"
+        android:shadowDy="15"
+        android:shadowRadius="5"
+        android:elegantTextHeight="true"
+        android:background="@drawable/androidwall"
+        android:id="@+id/appwallpapers"
+        android:textAppearance="@style/AlertDialog.AppCompat.Light"
+        android:textStyle="bold"/>
+</RelativeLayout>

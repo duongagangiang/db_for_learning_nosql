@@ -7,11 +7,13 @@
     tools:context="com.example.pcc.appringtone.MainActivity">
 
     <GridView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="3"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:verticalSpacing="15dp"
+        android:horizontalSpacing="7dp"
         android:id="@+id/gridView"
         ></GridView>
 </RelativeLayout>

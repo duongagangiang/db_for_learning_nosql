@@ -5,15 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.pcc.appringtone.Category">
-    <TextView
+    <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textColor="#ff0000"
-        android:textSize="50sp"
-        android:text="App Wallpapers"
-        android:id="@+id/appwallpapers"
-        android:background="@drawable/style"
-        android:textAppearance="@style/AlertDialog.AppCompat.Light"
-        android:fontFamily="cursive"/>
+        android:numColumns="2"
+        android:id="@+id/gridViewCategory"
+        ></GridView>
 </RelativeLayout>
